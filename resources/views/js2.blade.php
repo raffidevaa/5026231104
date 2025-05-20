@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+  <head>
+    <title>Form</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+      function formValidation() {
+        var nrp = document.getElementById("nrp").value;
+        var nama = document.getElementById("nama").value;
+
+        if (nrp.length == 0) {
+          Swal.fire({
+            title: "Pesan Kesalahan",
+            text: "NRP harus diisi!",
+            icon: "error",
+          });
+          document.getElementById("nrp").focus();
+          return false;
+        }
+        if (nama.length < 1) {
+          Swal.fire({
+            title: "Pesan Kesalahan",
+            text: "Nama harus diisi!",
+            icon: "error",
+          });
+          document.getElementById("nama").focus();
+          return false;
+        }
+        if (/\d/.test(nama)) {
+          Swal.fire({
+            title: "Pesan Kesalahan",
+            text: "Nama tidak boleh angka!",
+            icon: "error",
+          });
+          document.getElementById("nama").focus();
+          return false;
+        }
+        return true;
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <h3>Form Pendaftaran ISE</h3>
+      <form
+        id="frmpendaftaran"
+        action="https://google.co.id"
+        method="get"
+        onsubmit="return formValidation()"
+      >
+        NRP :
+        <input
+          type="text"
+          id="nrp"
+          class="form-control"
+          placeholder="Silahkan isi NRP, 10 digit, harus angka, gak boleh kosong"
+          name="nrp"
+        />
+        <br />
+        NAMA :
+        <input
+          type="text"
+          id="nama"
+          class="form-control"
+          placeholder="Silahkan isi Nama, minim 1 digit, gak boleh kosong"
+          name="nama"
+        />
+        <br />
+        <input type="submit" class="btn btn-primary" value="Daftar" />
+      </form>
+    </div>
+  </body>
+</html>

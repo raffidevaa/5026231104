@@ -1,0 +1,217 @@
+@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700");
+
+body {
+  font-size: 14px;
+  color: #333;
+  font-family: "Roboto", sans-serif;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/** ======================  HEADER  ==============================**/
+.header {
+  background-color: #3c8dbc;
+}
+.header .dropdown-menu {
+  position: absolute;
+  right: 0;
+  border-radius: 0;
+}
+.header .user-image {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.header .navbar-nav .nav-link {
+  color: #fff;
+  padding: 10px 20px;
+}
+.header .navbar-nav .nav-link:hover,
+.header .navbar-nav .nav-link:focus {
+  background: rgba(0, 0, 0, 0.1);
+  color: #f6f6f6;
+}
+.header .fa.fa-fw.fa-bars {
+  color: #fff;
+}
+
+/*** DROPDOWN MENU ***/
+.navbar-nav .dropdown-menu {
+  width: 280px;
+  padding: 0;
+  top: 100%;
+}
+.navbar-nav .messages-menu .menu > li > a,
+.navbar-nav .notifications-menu .menu > li > a {
+  padding: 10px;
+  display: block;
+  border-bottom: 1px solid #f4f4f4;
+}
+.navbar-nav .messages-menu .menu > li > a > h4 {
+  margin: 0 0 0 45px;
+  font-size: 15px;
+  color: #333;
+}
+
+/*** FOOTER ***/
+.footer-ul a {
+  font-size: 12px;
+  background-color: #fff;
+  padding: 7px 10px;
+  border-bottom: 1px solid #eee;
+  color: #333;
+  display: block;
+}
+
+/** ======================  SIDEBAR  ==============================**/
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: #125589;
+  color: white;
+  padding: 20px;
+}
+.sidebar .user-panel {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.sidebar .user-panel img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.sidebar .user-panel p {
+  margin: 6px;
+}
+.sidebar .list-all-sidebar {
+  margin-bottom: 400px;
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+.sidebar li a {
+  display: block;
+  padding: 8px 12px;
+  color: #fff;
+  text-decoration: none;
+}
+.sidebar li a.active {
+  background-color: #152a62;
+  border-left: 5px solid #dedede;
+  transition: all 0.5s ease-in-out;
+}
+.sidebar li a:hover {
+  background-color: #152a62 !important;
+}
+
+/*** COLLAPSIBLE SIDEBAR ***/
+.sidebar.fliph {
+  width: 42px;
+  transition: all 0.5s ease-in-out;
+}
+.sidebar.fliph .user-panel {
+  display: none;
+}
+
+/** ======================  MAIN CONTENT  ==============================**/
+.main-content {
+  margin-left: 270px;
+  padding: 25px;
+}
+
+.main-content > h2 {
+  margin: 20px;
+  padding-bottom: 50px;
+}
+
+.arrow-expand-icon {
+  margin: 10px;
+  padding-left: 200px;
+  padding-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+  }
+  .main-content {
+    margin-left: 220px;
+  }
+}
+.logout-button {
+  margin: 80px;
+  background: rgba(255, 255, 255, 0.272);
+  color: white;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.wrap {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  background-color: #fff;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.ico-wrap img {
+  width: 80px; /* Ukuran gambar kecil */
+  height: auto;
+}
+
+.text-wrap {
+  text-align: left;
+  flex-grow: 1; /* Agar teks mengambil ruang tengah */
+}
+
+.rating-wrap {
+  font-size: 40px; /* Ukuran rating bintang */
+  color: #d8d6d6;
+  white-space: nowrap; /* Mencegah rating turun ke bawah */
+  margin: 10px;
+}
+
+.rating-wrap > .rating2 {
+  color: rgb(255, 208, 0);
+}
+
+.unrated {
+  color: #d8d6d6;
+}
+
+.rating-wrap > h6 {
+  margin: 10px;
+  font-size: small;
+  color: #9c9b9b;
+}
+
+.rating-num {
+  font-size: 30px;
+  font-weight: bold;
+  color: #053dac;
+  margin-bottom: 25px;
+}
+
+.img-small {
+  width: 80px;
+  height: auto;
+}
