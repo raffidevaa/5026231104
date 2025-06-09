@@ -5,6 +5,7 @@ use App\Http\Controllers\Link;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\Pegawai2Controller;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\MinyakgorengController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -76,3 +77,12 @@ Route::get('/pegawai/cari', [PegawaiController::class, 'cari']);
 Route::get('template', function () {
     return view('template'); //v
 });
+
+//route crud tugas mandiri minyak goreng
+Route::get('/minyakgoreng', [MinyakgorengController::class, 'index']);
+Route::get('/minyakgoreng/tambah', [MinyakgorengController::class, 'tambah']);
+Route::post('/minyakgoreng/store', [MinyakgorengController::class, 'store']);
+Route::get('/minyakgoreng/edit/{id}', [MinyakgorengController::class, 'edit']);
+Route::post('/minyakgoreng/update', [MinyakgorengController::class, 'update']);
+Route::get('/minyakgoreng/hapus/{id}', [MinyakgorengController::class, 'hapus']);
+Route::get('/minyakgoreng/cari', [MinyakgorengController::class, 'cari']);
