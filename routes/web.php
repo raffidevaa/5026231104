@@ -6,6 +6,7 @@ use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\Pegawai2Controller;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\MinyakgorengController;
+use App\Http\Controllers\KaryawanController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -86,3 +87,10 @@ Route::get('/minyakgoreng/edit/{id}', [MinyakgorengController::class, 'edit']);
 Route::post('/minyakgoreng/update', [MinyakgorengController::class, 'update']);
 Route::get('/minyakgoreng/hapus/{id}', [MinyakgorengController::class, 'hapus']);
 Route::get('/minyakgoreng/cari', [MinyakgorengController::class, 'cari']);
+
+//route latihan 3 karyawan
+Route::get('/karyawan', [KaryawanController::class, 'index']);
+Route::get('/karyawan/tambah', [KaryawanController::class, 'tambah']);
+Route::post('/karyawan/store', [KaryawanController::class, 'store']);
+Route::get('/karyawan/hapus/{id}', [KaryawanController::class, 'hapus']);
+
