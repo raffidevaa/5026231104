@@ -7,6 +7,7 @@
 
 	<table class = "table table-striped">
 		<tr>
+            <th>Kode Pegawai</th>
 			<th>Nama Lengkap</th>
 			<th>Divisi</th>
 			<th>Departemen</th>
@@ -14,6 +15,7 @@
 		</tr>
 		@foreach($karyawan as $k)
 		<tr>
+            <td>{{ $k->kodepegawai }}</td>
 			<td style="text-transform: uppercase;">{{ $k->namalengkap }}</td>
 			<td>{{ $k->divisi }}</td>
 			<td style="text-transform: lowercase;">{{ $k->departemen }}</td>
